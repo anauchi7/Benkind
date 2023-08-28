@@ -1,0 +1,11 @@
+var links = new Array("Home", "About Us", "Contact Us");
+var links_text = new Array("Home", "About Us", "Contact Us");
+var links_url = new Array("index.html", "about.html", "contact.html");
+
+for (var i = 0; i < links.length; i++) {
+    if (document.location.href.indexOf(links_url[i]) != -1) {
+        document.write('<a href="' + links_url[i] + '" class="active">' + links_text[i] + '</a>');
+    } else {
+        document.write('<a href="' + links_url[i] + '">' + links_text[i] + '</a>');
+    }
+}
